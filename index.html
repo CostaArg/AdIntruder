@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News</title>
+  </head>
+  <body>
+    <style>
+      p {
+        max-width: 1000px;
+      }
+    </style>
+
+    <h1>News Article</h1>
+    <p>
+      Adipisicing magna sunt veniam dolore eu aute veniam. Nostrud culpa ipsum
+      labore id excepteur nulla fugiat labore qui do officia ex. Dolore veniam
+      proident culpa pariatur ut dolor ea mollit magna exercitation id ea nisi
+      laborum. Reprehenderit esse est laborum ea. Exercitation adipisicing
+      aliquip tempor officia non non cupidatat sit. Deserunt officia elit elit
+      veniam est occaecat dolore Lorem sit. Duis mollit dolore voluptate
+      exercitation sit enim duis nisi culpa veniam. Lorem ipsum, dolor sit amet
+      consectetur adipisicing elit. Est, consectetur? Velit, tempore. Delectus,
+      maiores accusantium ratione quam natus libero temporibus quia architecto
+      corrupti nam necessitatibus expedita voluptate odit deserunt nesciunt.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis quas
+      laborum facere blanditiis assumenda a consequuntur, impedit aut sequi cum
+      vitae reprehenderit cupiditate labore, rerum illum, natus architecto
+      accusamus sapiente. Lorem ipsum dolor sit amet consectetur adipisicing
+      elit. Ea aliquid impedit nam perferendis praesentium ducimus rerum, totam
+      harum eos excepturi, similique corporis, libero reprehenderit? Minima
+      corrupti reprehenderit officiis accusantium assumenda!
+    </p>
+    <div id="video-placeholder"></div>
+    <p>
+      Aliqua eu in elit cillum irure minim. Proident velit consectetur mollit
+      enim ullamco consequat quis. Tempor aliqua quis est id proident enim
+      cillum cupidatat sit. Lorem ipsum dolor sit amet consectetur adipisicing
+      elit. In tempore consequuntur quidem dignissimos nulla ullam sint? In, ut?
+      Doloremque veniam impedit velit suscipit deserunt, odio molestiae dolore
+      inventore saepe earum! Lorem ipsum dolor sit amet consectetur adipisicing
+      elit. Nobis sed unde vero minus, nesciunt est deserunt iste veritatis
+      voluptatem adipisci temporibus, totam perferendis laboriosam in repellat
+      quibusdam optio ut doloremque. Lorem ipsum, dolor sit amet consectetur
+      adipisicing elit. Vel, sapiente! Tempore tempora repellat impedit nostrum
+      atque dignissimos, aliquam animi, odio doloremque quo velit accusamus
+      explicabo. Vero facilis ex atque est.
+    </p>
+
+    <script>
+      window.onload = function () {
+        setTimeout(intruder, 5000);
+        setTimeout(removeIntruder, 15000);
+      };
+
+      function intruder() {
+        let videoDiv = document.getElementById("video-placeholder");
+        let video = document.createElement("video");
+        video.setAttribute("id", "my-video");
+        let videoSource = document.createElement("source");
+        videoSource.setAttribute("src", "samplevideo.mp4");
+        videoSource.setAttribute("type", "video/mp4");
+        video.appendChild(videoSource);
+        video.setAttribute("autoplay", "true");
+        videoDiv.appendChild(video);
+      }
+
+      function removeIntruder() {
+        let video = document.getElementById("my-video");
+        video.parentNode.removeChild(video);
+      }
+    </script>
+  </body>
+</html>
